@@ -164,6 +164,7 @@
             this.textBoxPlayer1.Name = "textBoxPlayer1";
             this.textBoxPlayer1.Size = new System.Drawing.Size(100, 38);
             this.textBoxPlayer1.TabIndex = 11;
+            this.textBoxPlayer1.TabStop = false;
             this.textBoxPlayer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxPlayer2
@@ -173,6 +174,7 @@
             this.textBoxPlayer2.Name = "textBoxPlayer2";
             this.textBoxPlayer2.Size = new System.Drawing.Size(100, 38);
             this.textBoxPlayer2.TabIndex = 12;
+            this.textBoxPlayer2.TabStop = false;
             this.textBoxPlayer2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonResetGame
@@ -180,7 +182,7 @@
             this.buttonResetGame.Location = new System.Drawing.Point(591, 306);
             this.buttonResetGame.Name = "buttonResetGame";
             this.buttonResetGame.Size = new System.Drawing.Size(100, 39);
-            this.buttonResetGame.TabIndex = 13;
+            this.buttonResetGame.TabIndex = 9;
             this.buttonResetGame.Text = "&Reset Game";
             this.buttonResetGame.UseVisualStyleBackColor = true;
             this.buttonResetGame.Click += new System.EventHandler(this.buttonReset_Click);
@@ -190,7 +192,7 @@
             this.buttonExit.Location = new System.Drawing.Point(741, 306);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 39);
-            this.buttonExit.TabIndex = 14;
+            this.buttonExit.TabIndex = 10;
             this.buttonExit.Text = "E&xit Game";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
