@@ -22,7 +22,18 @@ namespace TicTacToe
         private Player player2;
         private Board gameBoard;
         public bool humanPlayersOnly;
-           
+
+        public string Player1Team
+        {
+            get { return player1.Team; }
+        }
+        public string Player2Team
+        {
+            get { return player2.Team; }
+        }
+
+
+
         // Custom Constructor
         public Game()
         {

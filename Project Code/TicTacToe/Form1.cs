@@ -30,8 +30,21 @@ namespace TicTacToe
         {
             game = new Game();
 
+            
+
             // AI Moves first if playing as X
             WhoStartsGame();
+        }
+
+        private void ShowPlayerTeams()
+        {
+            const string LEFT_BRACKET = "( ";
+            const string RIGHT_BRACKET = " )";
+
+            labelPlayer1Team.Text = string.Format(LEFT_BRACKET + game.Player1Team + RIGHT_BRACKET);
+            labelPlayer2Team.Text = string.Format(LEFT_BRACKET + game.Player2Team + RIGHT_BRACKET);
+            labelPlayer1Team.Update();
+            labelPlayer2Team.Update();
         }
 
         // Human Player's Move
@@ -80,6 +93,8 @@ namespace TicTacToe
         /// </summary>
         private void WhoStartsGame()
         {
+            ShowPlayerTeams();
+
             if (game.PlayerTurn() == 2 && !game.humanPlayersOnly)
             {
                 PlayAI();
@@ -127,17 +142,6 @@ namespace TicTacToe
         {
             textBoxPlayer1.Text = game.GameScores[0].ToString();
             textBoxPlayer2.Text = game.GameScores[1].ToString();
-        }
-
-        /// <summary>
-        /// Event: User-selected Button Click to play move 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button_Click(object sender, EventArgs e)
-        {
-            playerSelectedButton = sender as Button;
-            PlayMove();
         }
 
         /// <summary>
@@ -256,15 +260,39 @@ namespace TicTacToe
             }
         }
 
+        #region Events
+        /// <summary>
+        /// Event: User-selected Button Click to play move 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button_Click(object sender, EventArgs e)
+        {
+            playerSelectedButton = sender as Button;
+            PlayMove();
+        }
+
+        /// <summary>
+        /// Event: Reset Game on Button Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonReset_Click(object sender, EventArgs e)
         {
             ClearBoard();
             game.StartGame();
         }
 
+        /// <summary>
+        /// Event: Exit Game on Button Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        #endregion
     }
 }

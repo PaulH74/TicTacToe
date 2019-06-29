@@ -43,6 +43,8 @@
             this.textBoxPlayer2 = new System.Windows.Forms.TextBox();
             this.buttonResetGame = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.labelPlayer1Team = new System.Windows.Forms.Label();
+            this.labelPlayer2Team = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button0
@@ -139,7 +141,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(571, 187);
+            this.label1.Location = new System.Drawing.Point(585, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 31);
             this.label1.TabIndex = 9;
@@ -149,7 +151,7 @@
             // 
             this.labelPlayer2.AutoSize = true;
             this.labelPlayer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlayer2.Location = new System.Drawing.Point(726, 187);
+            this.labelPlayer2.Location = new System.Drawing.Point(735, 203);
             this.labelPlayer2.Name = "labelPlayer2";
             this.labelPlayer2.Size = new System.Drawing.Size(113, 31);
             this.labelPlayer2.TabIndex = 10;
@@ -158,7 +160,7 @@
             // textBoxPlayer1
             // 
             this.textBoxPlayer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPlayer1.Location = new System.Drawing.Point(577, 231);
+            this.textBoxPlayer1.Location = new System.Drawing.Point(591, 247);
             this.textBoxPlayer1.Name = "textBoxPlayer1";
             this.textBoxPlayer1.Size = new System.Drawing.Size(100, 38);
             this.textBoxPlayer1.TabIndex = 11;
@@ -167,7 +169,7 @@
             // textBoxPlayer2
             // 
             this.textBoxPlayer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPlayer2.Location = new System.Drawing.Point(732, 231);
+            this.textBoxPlayer2.Location = new System.Drawing.Point(741, 247);
             this.textBoxPlayer2.Name = "textBoxPlayer2";
             this.textBoxPlayer2.Size = new System.Drawing.Size(100, 38);
             this.textBoxPlayer2.TabIndex = 12;
@@ -175,7 +177,7 @@
             // 
             // buttonResetGame
             // 
-            this.buttonResetGame.Location = new System.Drawing.Point(577, 290);
+            this.buttonResetGame.Location = new System.Drawing.Point(591, 306);
             this.buttonResetGame.Name = "buttonResetGame";
             this.buttonResetGame.Size = new System.Drawing.Size(100, 39);
             this.buttonResetGame.TabIndex = 13;
@@ -185,7 +187,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(732, 290);
+            this.buttonExit.Location = new System.Drawing.Point(741, 306);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 39);
             this.buttonExit.TabIndex = 14;
@@ -193,11 +195,33 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // labelPlayer1Team
+            // 
+            this.labelPlayer1Team.AutoSize = true;
+            this.labelPlayer1Team.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlayer1Team.Location = new System.Drawing.Point(609, 159);
+            this.labelPlayer1Team.Name = "labelPlayer1Team";
+            this.labelPlayer1Team.Size = new System.Drawing.Size(64, 31);
+            this.labelPlayer1Team.TabIndex = 15;
+            this.labelPlayer1Team.Text = "( X )";
+            // 
+            // labelPlayer2Team
+            // 
+            this.labelPlayer2Team.AutoSize = true;
+            this.labelPlayer2Team.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlayer2Team.Location = new System.Drawing.Point(758, 159);
+            this.labelPlayer2Team.Name = "labelPlayer2Team";
+            this.labelPlayer2Team.Size = new System.Drawing.Size(67, 31);
+            this.labelPlayer2Team.TabIndex = 16;
+            this.labelPlayer2Team.Text = "( O )";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 603);
+            this.Controls.Add(this.labelPlayer2Team);
+            this.Controls.Add(this.labelPlayer1Team);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonResetGame);
             this.Controls.Add(this.textBoxPlayer2);
@@ -237,6 +261,8 @@
         private System.Windows.Forms.TextBox textBoxPlayer2;
         private System.Windows.Forms.Button buttonResetGame;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label labelPlayer1Team;
+        private System.Windows.Forms.Label labelPlayer2Team;
     }
 }
 
